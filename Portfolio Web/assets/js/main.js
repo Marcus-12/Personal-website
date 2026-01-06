@@ -112,3 +112,25 @@ function scrollActive() {
 }
 
 window.addEventListener("scroll", scrollActive);
+
+
+const projectSlides = document.querySelectorAll('.project-slide');
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+
+let currentProject = 0;
+
+function showProject(index) {
+  projectSlides.forEach(slide => slide.classList.remove('active'));
+  projectSlides[index].classList.add('active');
+}
+
+nextBtn.addEventListener('click', () => {
+  currentProject = (currentProject + 1) % projectSlides.length;
+  showProject(currentProject);
+});
+
+prevBtn.addEventListener('click', () => {
+  currentProject = (currentProject - 1 + projectSlides.length) % projectSlides.length;
+  showProject(currentProject);
+});
