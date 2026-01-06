@@ -423,6 +423,73 @@ h3{
   z-index: 2;
 }
 
+/* ------ PROJECT SLIDER ------- */
+.project-slider{
+  position: relative;
+  max-width: 700px;
+  margin: auto;
+}
+
+.project-slides{
+  overflow: hidden;
+}
+
+.project-slide {
+  display: none;
+  background: var(--color-white);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+  text-align: center;
+  animation: fadeSlide 0.4s ease-in-out;
+}
+
+.project-slide.active {
+  display: block;
+}
+
+.project-slide p{
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* Navigation buttons */
+.slide-btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--first-color);
+  color: var(--color-white);
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slide-btn:hover {
+  background: var(--first-color-hover);
+}
+
+.prev{
+  left: -60px;
+}
+
+.next{
+  right: -60px;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: scale(0.97);}
+  to { opacity: 1; transform: scale(1);}
+}
+
+/* Mobile tweak */
+@media (max-width: 900px){
+  .prev{ left: -20px;}
+  .next{ right: -20px;}
+}
 
 /* ------ CONTACT BOX --------- */
 .contact-info{
