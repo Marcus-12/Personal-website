@@ -468,6 +468,11 @@ h3{
   transition: 0.3s;
 }
 
+.btn{
+  background: white;
+  backdrop-filter: blur(10px);
+}
+
 .slide-btn:hover {
   background: var(--first-color-hover);
 }
