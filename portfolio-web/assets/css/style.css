@@ -291,6 +291,13 @@ nav{
 .section{
   padding-block: 5em;
 }
+.about-row{
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;  /* vertical */
+  width: 100%;
+  gap: 50px;
+}
 .row{
   display: flex;
   justify-content: center; /* horizontal */
@@ -298,10 +305,10 @@ nav{
   /* width: 100%;
   gap: 50px; */
 }
-/* .col{
+.col{
   display: flex;
   width: 50%;
-} */
+}
 
 
 /* -- ## --- REUSABLE CSS -- ## -- */
